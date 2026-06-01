@@ -1,0 +1,8 @@
+# Runtime and per-machine files — not tracked
+
+sessions/
+auth.json
+npm/
+git/
+plans/
+run-history.jsonl

@@ -1,0 +1,14 @@
+{
+  "providers": {
+    "work_gpu(local)": {
+      "baseUrl": "http://100.64.0.2:1312",
+      "api": "openai-completions",
+      "apiKey": "llama.cpp",
+      "models": [
+        { "id": "work_gpu(local)",
+          "contextWindow": 262144
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "baseUrl": "http://host.docker.internal:1616/v1",
+  "model": "qwen3.5-0.8b-mlx",
+  "debounceMs": 300,
+  "maxTokens": 50,
+  "contextTokens": 20000,
+  "enableClassicalCompletion": true,
+  "classicalMinChars": 3,
+  "workspaceScanDepth": 3,
+  "maxVisibleWords": 10,
+  "repredictThreshold": 3
+}

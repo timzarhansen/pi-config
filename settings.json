@@ -1,4 +1,12 @@
 {
-  "lastChangelogVersion": "0.77.0",
-  "packages": []
+  "lastChangelogVersion": "0.78.1",
+  "packages": [
+    "npm:pi-openplan",
+    "npm:pi-mcp-adapter"
+  ],
+  "theme": "my-theme",
+  "defaultProvider": "work_gpu(local)",
+  "defaultModel": "work_gpu(local)",
+  "httpIdleTimeoutMs": 0,
+  "defaultThinkingLevel": "high"
 }

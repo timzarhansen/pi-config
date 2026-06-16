@@ -6,3 +6,7 @@ npm/
 git/
 plans/
 run-history.jsonl
+mcp-cache.json
+pi-crash.log
+.DS_Store
+bin/

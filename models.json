@@ -9,6 +9,16 @@
           "contextWindow": 262144
         }
       ]
+    },
+    "mac LLM(local)": {
+      "baseUrl": "http://100.64.0.1:1312",
+      "api": "openai-completions",
+      "apiKey": "llama.cpp",
+      "models": [
+        { "id": "mac LLM(local)",
+          "contextWindow": 262144
+        }
+      ]
     }
   }
 }

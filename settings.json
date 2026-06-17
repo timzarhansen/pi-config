@@ -1,12 +1,12 @@
 {
-  "lastChangelogVersion": "0.78.1",
+  "lastChangelogVersion": "0.79.6",
   "packages": [
     "npm:pi-openplan",
     "npm:pi-mcp-adapter"
   ],
   "theme": "my-theme",
-  "defaultProvider": "work_gpu(local)",
-  "defaultModel": "work_gpu(local)",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "deepseek-v4-flash",
   "httpIdleTimeoutMs": 0,
-  "defaultThinkingLevel": "high"
+  "defaultThinkingLevel": "xhigh"
 }

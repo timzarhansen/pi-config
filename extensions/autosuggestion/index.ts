@@ -25,7 +25,7 @@
  * Toggle: /autosuggest
  */
 
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { appendFileSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { CustomEditor, type ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { matchesKey, Key, visibleWidth, truncateToWidth } from "@earendil-works/pi-tui";
@@ -432,7 +432,22 @@ class GhostEditor extends CustomEditor {
     }
   }
 
+  private static readonly SHIFT_ENTER_SEQUENCES = new Set([
+    "\n",            // VS Code / bare LF
+    "\x1b\r",        // JetBrains ESC+CR
+    "\x1b\n",        // JetBrains ESC+LF
+    "\x1b[13;2u",    // Kitty CSI-u
+    "\x1b[13;2:1u",  // Kitty CSI-u (press event)
+    "\x1b[13;2~",    // xterm function-key
+  ]);
+
   handleInput(data: string): void {
+    // Shift+Enter handling (integrated from shift-enter-fix extension)
+    if (GhostEditor.SHIFT_ENTER_SEQUENCES.has(data)) {
+      this.addNewLine();
+      return;
+    }
+
     // Tab: accept next word from buffer or classical completion suffix
     if (matchesKey(data, Key.tab)) {
       if (!this.predictionService.enabled) {

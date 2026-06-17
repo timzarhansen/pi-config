@@ -1,13 +1,14 @@
 {
   "enabled": true,
   "baseUrl": "http://host.docker.internal:1616/v1",
-  "model": "qwen3.5-0.8b-mlx",
+  "model": "Qwen3.5-2B-UD-Q8_K_XL.gguf",
   "debounceMs": 300,
   "maxTokens": 50,
-  "contextTokens": 20000,
+  "contextTokens": 2000,
   "enableClassicalCompletion": true,
   "classicalMinChars": 3,
-  "workspaceScanDepth": 3,
+  "workspaceScanDepth": 4,
   "maxVisibleWords": 10,
-  "repredictThreshold": 3
+  "repredictThreshold": 5,
+  "llmClassicalMode": "frequency"
 }

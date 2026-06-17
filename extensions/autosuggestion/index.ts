@@ -25,7 +25,7 @@
  * Toggle: /autosuggest
  */
 
-import { appendFileSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { CustomEditor, type ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { matchesKey, Key, visibleWidth, truncateToWidth } from "@earendil-works/pi-tui";
